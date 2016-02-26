@@ -50,6 +50,9 @@ And for obtain the values in the URL use the function `get_param()` and use patt
 
 	}
 
+##Error 404
+If you don't have a `404.php` file in your root folder the message of error will be taken from the default folder `core/defaults/errors/404.php`.
+
 ##License
 
 This software is released under the MIT License.
