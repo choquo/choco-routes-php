@@ -1,6 +1,12 @@
 # Choco Routes for PHP URL Friendly
 A simple route system based in PHP for your website or projects
 
+##Important Note
+
+All your HTML pages must have defined the meta tag `base`, this example has a built-in variable to set this tag value dinamically. This meta tag helps mantain all your links working properly.
+
+	<base href="<?=$base_href?>">
+
 ##Usage
 Download files and open `_routes.php` custom your project routes and that's all.
 
