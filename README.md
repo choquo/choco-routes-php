@@ -8,7 +8,10 @@ All your HTML pages must have defined the meta tag `base`, this example has a bu
 	<base href="<?php echo $base_href; ?>">
 
 ##Usage
-Download files and open `_routes.php` custom your project routes and that's all.
+Download files and open `_routes.php` to custom your project routes.
+
+
+##File "_routes.php"
 
 ###Matching URLS
 
