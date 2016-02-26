@@ -43,10 +43,10 @@ And for obtain the values in the URL use the function `get_param()` and use patt
 
 ##License
 
+This software is released under the MIT License.
+
 Author: Carlos Maldonado @choquo.
 
-If you found this code useful for your projects just give me a mention and share this repo in your social networks.
-
-This software is released under the MIT License.
+You can use this code in commercial and open source projects, if you use this code for your projects just give me a mention and share this repo in your social networks.
 
 2/26/2016 12:14:40 PM 
