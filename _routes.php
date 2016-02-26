@@ -20,10 +20,10 @@ if( is_homepage() ){
 * =====================================================================
 */
 //http://www.phpliveregex.com/p/eHz
-if( match_url('/nomames/propiedades/{str}/{str}/{int}') ){
+if( match_url('/a-simple-route/propiedades/{str}/{str}/{int}') ){
 	echo '<h1>Propiedades</h1>';
 	//Property ID
-	$id = get_param('/nomames/propiedades/{str}/{str}/{this}');
+	$id = get_param('/a-simple-route/propiedades/{str}/{str}/{this}');
 	echo '<h4>Property ID: '.$id.'</h4><br>';
 	exit;
 }
@@ -43,7 +43,7 @@ if( match_url('post/{str}/{int}') ){
 	$id = get_param('post/{str}/{this}');
 	echo '<h4>Post ID: '.$id.'</h4><br>';
 
-	include $theme_url.'/post.php';
+	include 'post.php';
 	exit;
 }
 
