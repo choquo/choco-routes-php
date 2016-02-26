@@ -1,49 +1,47 @@
 <?php 
 /* 
 * =====================================================================
-* HOME PAGE
+* HOME
 * =====================================================================
 */
 if( is_homepage() ){
-	$the_title			= 'Bienvenido';
-	$the_description 	= 'Esta es la descripcion';
-	$the_keywords 		= 'Estas, Son, Las, Keywords';
-	$the_fb_image 		= 'admin/uploads/page_algo/foto.jpg';
-	include $theme_url.'/home.php';
-	exit;
-}
-
-
-/* 
-* =====================================================================
-* EXAMPLE PROPERTIES
-* =====================================================================
-*/
-//http://www.phpliveregex.com/p/eHz
-if( match_url('/a-simple-route/propiedades/{str}/{str}/{int}') ){
-	echo '<h1>Propiedades</h1>';
-	//Property ID
-	$id = get_param('/a-simple-route/propiedades/{str}/{str}/{this}');
-	echo '<h4>Property ID: '.$id.'</h4><br>';
-	exit;
-}
-
-/* 
-* =====================================================================
-* BLOG POST
-* =====================================================================
-*/
-if( match_url('post/{str}/{int}') ){
-
-	//Post Slug
-	$slug = get_param('post/{this}/{int}');
-	echo '<h4>Post Slug: '.$slug.'</h4><br>';
 	
-	//Post ID
-	$id = get_param('post/{str}/{this}');
-	echo '<h4>Post ID: '.$id.'</h4><br>';
+	include 'home.php';
+	exit;
 
-	include 'post.php';
+}
+
+/* 
+* =====================================================================
+* ABOUT
+* =====================================================================
+*/
+if( match_url('about') ){
+	
+	//Set variables before load your content
+	$the_title			= 'About us';
+	$the_description 	= 'This is a description for the about page';
+	
+	include 'about.php';
+	exit;
+}
+
+/* 
+* =====================================================================
+* SERVICES: EXAMPLE WITH VARIABLES
+* =====================================================================
+*/
+if( match_url('services/{str}/{int}') ){ //Try the regex online http://www.phpliveregex.com/p/eHz
+	
+	//Catch variables before load content
+
+	//ID
+	$id = get_param('services/{str}/{this}');
+	
+	//Slug
+	$slug = get_param('services/{this}/{int}');
+
+	include 'services.php';
 	exit;
 }
 
